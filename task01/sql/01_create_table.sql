@@ -1,4 +1,4 @@
-create table MOCK_DATA
+create table mock_data
 (
     Fecha  date,
     Tienda text,
