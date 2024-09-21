@@ -1,0 +1,15 @@
+config:
+  send_anonymous_usage_stats: False
+dbt_bootcamp:
+  outputs:
+    prod:
+      connect_timeout: 10
+      dbname: "{{ env_var('POSTGRES_DB') }}"
+      host: "{{ env_var('POSTGRES_HOST') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      port: 5432
+      schema: "{{ env_var('POSTGRES_SCHEMA') }}"
+      threads: 1
+      type: postgres
+      user: "{{ env_var('POSTGRES_USER') }}"
+  target: prod
